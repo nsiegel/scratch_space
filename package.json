@@ -19,6 +19,8 @@
   "homepage": "https://github.com/nsiegel/scratch_space",
   "dependencies": {
     "express": "^4.13.3",
+    "gulp": "^3.9.0",
+    "gulp-sass": "^2.1.1",
     "swig": "^1.4.2"
   }
 }
