@@ -1,25 +1,27 @@
 <!DOCTYPE html>
-<html ng-app="scratch">
+<html>
   <head>
     <meta charset="utf-8">
     <title>Scratch Space</title>
     <link rel="stylesheet" href="bower/bootstrap/dist/css/bootstrap.min.css">
-    <script type="text/javascript" src="bower/angular/angular.min.js"></script>
-    <script type="text/javascript" src="bower/angular-bootstrap/ui-bootstrap.min.js"></script>
-    <script type="text/javascript" src="bower/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
-    <script type="text/javascript" src="bower/angular-ui-router/release/angular-ui-router.min.js"></script>
+    <link rel="stylesheet" href="build/scratch.css">
+    <script type="text/javascript" src="bower/jquery/dist/jquery.min.js"></script>
+    <script type="text/javascript" src="bower/bootstrap/dist/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="app/scratch.js"></script>
   </head>
   <body>
     <div id="main" class="container-fluid">
+      <div class="canvas-container">
+        <canvas id="canvas"></canvas>
+      </div>
 
   		<!-- <div class="col-xs-2">
   			<sidebar></sidebar>
   		</div> -->
 
-  		<div class="col-xs-10">
+  		<!-- <div class="col-xs-10">
   			<ui-view></ui-view>
-  		</div>
+  		</div> -->
 
   		<!-- <footer></footer> -->
 
