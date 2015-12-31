@@ -1,0 +1,21 @@
+@import "variables.scss";
+
+html {
+  height: 100%;
+}
+
+body {
+  min-height: 100%;
+  background-color: $background-color;
+}
+
+canvas {
+  background-color: white;
+  width: 100%;
+}
+
+.canvas-container {
+  width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
