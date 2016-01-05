@@ -1,5 +1,6 @@
 var express = require('express');
 var swig = require('swig');
+var io = require('socket.io');
 var routes = require('./routes');
 var app = express();
 
@@ -16,6 +17,15 @@ app.use(routes);
 app.use(express.static(__dirname + '/static'));
 
 var PORT = process.env.PORT || 3000;
-app.listen(PORT, function() {
+var server = app.listen(PORT, '0.0.0.0', function() {
   console.log('listening on port ' + PORT);
+});
+
+var listener = io.listen(server);
+
+listener.sockets.on('connection', function(socket) {
+  socket.emit('message', {'message': 'hello world'});
+  socket.on('draw', function(data) {
+    socket.emit('draw', data);
+  });
 });
